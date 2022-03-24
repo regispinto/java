@@ -1,7 +1,6 @@
 public class Funcionario {
     private String nome;
     private String cpf;
-    private double tipo;
 
     // O modificador protected torna o atributo público somente para as classes filhas,
     // porém o ideal é que os atributos sejam sempre privados
@@ -34,10 +33,6 @@ public class Funcionario {
 
     public void setSalario(double salario) {
         this.salario = salario;
-    }
-
-    public void setTipo(double tipo) {
-        this.tipo = tipo;
     }
 
     public double getBonificacao(){
