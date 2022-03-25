@@ -1,9 +1,9 @@
-public class Conta {
+public abstract class Conta {
     private int agencia;
     private int numero;
     private int anoAbertura;
     private Cliente titular;
-    private double saldo;
+    protected double saldo;
 
     // Seta um novo atributo da Class e não da instância do objeto
     // Static define um atributo da Classe
@@ -16,10 +16,6 @@ public class Conta {
         this.anoAbertura = ano;
 
         total++;
-
-        //System.out.println("O total de contas é " + getTotalContas());
-
-        //System.out.println("Estou criando a conta " + this.numero);
     }
 
     // Novo Constructor (Reaproveitamento)
@@ -29,20 +25,19 @@ public class Conta {
         this.anoAbertura = 2021;
 
         total++;
-
-        //System.out.println("O total de contas é " + getTotalContas());
-
-        //System.out.println("Estou criando a conta: " + this.numero + " Agência: " + this.agencia);
     }
 
-    public boolean deposita(double valor) {
-        if(valor > 0){
-            this.saldo += valor;
-            return true;
-        }
-        System.out.println("O depóstio inicial deve ser maior que zero");
-        return false;
-    }
+    // O método passou a ser Abstract, logo na classe mãe só pode ter a assinatura do método sem implementação,
+    // as mesmas devem ser feitas nas classes filhas
+    public abstract boolean deposita(double valor);
+        //    {
+        //        if(valor > 0){
+        //            this.saldo += valor;
+        //            return true;
+        //        }
+        //        System.out.println("O depóstio inicial deve ser maior que zero");
+        //        return false;
+        //    }
 
     public boolean saca(double valor){
         if(this.saldo >= valor){

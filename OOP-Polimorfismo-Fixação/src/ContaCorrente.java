@@ -9,4 +9,14 @@ public class ContaCorrente extends Conta {
         double valorASacar = valor + 0.2;
         return super.saca(valorASacar);
     }
+
+    @Override
+    public boolean deposita(double valor) {
+        if(valor > 0){
+            super.saldo += valor;
+            return true;
+        }
+        System.out.println("O depóstio inicial deve ser maior que zero");
+        return false;
+    }
 }
