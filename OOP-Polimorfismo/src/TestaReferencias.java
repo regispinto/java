@@ -4,8 +4,9 @@ public class TestaReferencias {
 
         ControleBonificacao controle = new ControleBonificacao();
 
+        // A classe Funcinario passou a ser "Abstract" então o código abaixo deixa de funcionar
+        /*
         Funcionario funcionario = new Funcionario();
-
         funcionario.setNome("Régis Silveira Pinto");
         funcionario.setCpf("892.245.844-82");
         funcionario.setSalario(5000.0);
@@ -16,6 +17,7 @@ public class TestaReferencias {
         bonificacao = controle.registra(funcionario);
         System.out.println("Bonificação: " + bonificacao);
         System.out.println("Sal.Liquido: " + funcionario.getSalarioLiquido(bonificacao));
+        */
 
         Gerente gerente = new Gerente();
         gerente.setNome("Paulo Roberto Costa");
