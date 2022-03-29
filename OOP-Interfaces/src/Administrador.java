@@ -1,8 +1,9 @@
-public class Administrador extends Funcionario implements Autenticacao {
+public class Administrador extends Funcionario implements Autenticacao{
+
     private int senha;
 
     public double getBonificacao(){
-        // implementação da bonificação do administrador omitida
+        return 50;
     }
 
     @Override

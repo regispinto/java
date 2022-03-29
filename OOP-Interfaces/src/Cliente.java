@@ -8,7 +8,6 @@ public class Cliente implements Autenticacao{
 
     @Override
     public boolean autentica(int senha){
-
         if(this.senha == senha){
             return true;
         } else {

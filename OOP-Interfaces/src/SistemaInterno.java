@@ -2,8 +2,7 @@ public class SistemaInterno {
     private int senha = 2222;
 
     public void autentica(Autenticacao au){
-
-        boolean autenticou = au.autentica(au.autentica());
+        boolean autenticou = au.autentica(this.senha);
 
         if(autenticou){
             System.out.println("Pode entrar no sistema");
