@@ -1,4 +1,5 @@
 public class ControleBonificacao {
+
     private double soma;
 
     public double registra(Funcionario f) {

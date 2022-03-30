@@ -1,5 +1,6 @@
 public class TestaReferencias {
     public static void main(String[] args) {
+
         double bonificacao;
 
         // Exemplo da vantagen da abstração com o uso de Interfaces

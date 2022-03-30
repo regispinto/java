@@ -1,7 +1,6 @@
 // Gerente é um funcionário que exige autenticação, herda a Class Funcionário e "assina"
 // o contrato (Interface) Autenticacao
 public class Gerente extends Funcionario implements Autenticacao {
-
     private int senha;
 
     public double getBonificacao(){

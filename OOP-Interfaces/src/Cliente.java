@@ -1,4 +1,5 @@
 public class Cliente implements Autenticacao{
+
     private int senha;
 
     @Override

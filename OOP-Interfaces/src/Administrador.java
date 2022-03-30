@@ -1,5 +1,4 @@
 public class Administrador extends Funcionario implements Autenticacao{
-
     private int senha;
 
     public double getBonificacao(){
