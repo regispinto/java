@@ -24,6 +24,9 @@ public class Fluxo {
             //int a = 1/0;
             Conta c = null;
             c.deposita();
+
+            Teste t = null;
+            c.deposita();
         }
         System.out.println("Fim do metodo2");
     }
