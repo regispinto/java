@@ -1,4 +1,6 @@
-public class Gerente extends Funcionario implements Autenticacao{
+// Gerente é um funcionário que exige autenticação, herda a Class Funcionário e "assina"
+// o contrato (Interface) Autenticacao
+public class Gerente extends Funcionario implements Autenticacao {
     private int senha;
 
     public double getBonificacao(){
@@ -11,6 +13,7 @@ public class Gerente extends Funcionario implements Autenticacao{
     public void setSenha(int senha){
         this.senha = senha;
     }
+
     @Override
     public boolean autentica(int senha) {
         if (this.senha == senha) {

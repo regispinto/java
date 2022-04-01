@@ -91,4 +91,6 @@ public abstract class Conta {
     public static int getTotalContas(){
         return Conta.total;
     }
+
+    public abstract double getValorImposto();
 }

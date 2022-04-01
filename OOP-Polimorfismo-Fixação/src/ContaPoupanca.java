@@ -1,5 +1,4 @@
-public class ContaPoupanca extends Conta {
-
+public class ContaPoupanca extends Conta implements  Tributavel{
     public ContaPoupanca(int agencia, int numero) {
         super(agencia, numero);
     }
@@ -12,5 +11,10 @@ public class ContaPoupanca extends Conta {
         }
         System.out.println("O depóstio inicial deve ser maior que zero");
         return false;
+    }
+
+    @Override
+    public double getValorImposto() {
+        return 0;
     }
 }

@@ -1,6 +1,12 @@
 public class TestaReferencias {
     public static void main(String[] args) {
+
         double bonificacao;
+
+        // Exemplo da vantagen da abstração com o uso de Interfaces
+        Autenticacao referencia1 = new Gerente();
+        Autenticacao referencia2 = new Administrador();
+        Autenticacao referencia3 = new Cliente();
 
         ControleBonificacao controle = new ControleBonificacao();
 
