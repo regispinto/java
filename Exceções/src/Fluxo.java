@@ -19,15 +19,7 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Ini do metodo2");
-        for(int i = 1; i <= 5; i++) {
-            System.out.println(i);
-            //int a = 1/0;
-            Conta c = null;
-            c.deposita();
-
-            Teste t = null;
-            c.deposita();
-        }
+        ArithmeticException exception = new ArithmeticException();
         System.out.println("Fim do metodo2");
     }
 }
