@@ -30,37 +30,26 @@ public abstract class Conta {
     // O método passou a ser Abstract, logo na classe mãe só pode ter a assinatura do método sem implementação,
     // as mesmas devem ser feitas nas classes filhas
     public abstract boolean deposita(double valor);
-        //    {
+        //{
         //        if(valor > 0){
         //            this.saldo += valor;
         //            return true;
         //        }
         //        System.out.println("O depóstio inicial deve ser maior que zero");
         //        return false;
-        //    }
+        //}
 
-    public boolean saca(double valor){
-        if(this.saldo >= valor){
-            this.saldo -= valor;
-            return true;
+    public void saca(double valor) throws SaldoInsuficienteException{
+        if(this.saldo < valor) {
+            throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
         }
-        System.out.println("Saldo insuficiente!");
-        return false;
+
+        this.saldo -= valor;
     }
 
-    public boolean transfere(double valor, Conta destino) {
-        if(this.saldo >= valor) {
-            // Aqui chama o método específico (saca) da clase ContaCorrente
-            if(this.saca(valor)) {
-                destino.deposita(valor);
-                System.out.println("Transferência realizada com sucesso!");
-                return true;
-            } else {
-                return false;
-            }
-        }
-        System.out.println("Saldo insuficiente na conta!");
-        return false;
+    public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
+        this.saca(valor);
+        destino.deposita(valor);
     }
 
     public double getSaldo(){
