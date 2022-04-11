@@ -1,6 +1,7 @@
 package br.com.bytebanck.banco.modelo;
 
 public class ContaPoupanca extends Conta implements Tributavel {
+
     public ContaPoupanca(int agencia, int numero) {
         super(agencia, numero);
     }

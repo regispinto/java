@@ -1,6 +1,7 @@
 package br.com.bytebanck.banco.modelo;
 
 public class Cliente {
+
     private String nome;
     private String cpf;
     private String profissao;

@@ -1,6 +1,7 @@
 package br.com.bytebanck.banco.modelo;
 
 public abstract class Conta {
+
     private int agencia;
     private int numero;
     private int anoAbertura;
