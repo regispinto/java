@@ -1,4 +1,6 @@
-public class SeguroVida implements Tributavel{
+package Classes;
+
+public class SeguroVida implements Tributavel {
 
     @Override
     public double getValorImposto() {

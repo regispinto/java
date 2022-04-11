@@ -1,4 +1,6 @@
-public class ContaCorrente extends Conta implements Tributavel{
+package Classes;
+
+public class ContaCorrente extends Conta implements Tributavel {
 
     public ContaCorrente(int agencia, int numero) {
         super(agencia, numero);

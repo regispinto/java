@@ -1,3 +1,9 @@
+package Testes;
+
+import Classes.ContaCorrente;
+import Classes.ContaPoupanca;
+import Classes.SaldoInsuficienteException;
+
 public class TestaContas {
     public static void main(String[] args) throws SaldoInsuficienteException {
         ContaCorrente cc = new ContaCorrente(111, 456);
