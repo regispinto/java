@@ -1,5 +1,9 @@
 package br.com.bytebanck.banco.modelo;
 
+/***
+ * @Autor: Régis Silveira Pinto
+ */
+
 public abstract class Conta {
 
     private int agencia;
