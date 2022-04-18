@@ -55,5 +55,18 @@ public class TestaString {
         System.out.println("String nome: " + nome);
         System.out.println("Método contains(jav): " + nome.contains("jav"));
         System.out.println("Método contains(Jav): " + nome.contains("Jav"));
+
+        StringBuilder builder = new StringBuilder("Socorram");
+        builder.append("-");
+        builder.append("me");
+        builder.append(", ");
+        builder.append("subi ");
+        builder.append("no ");
+        builder.append("ônibus ");
+        builder.append("em ");
+        builder.append("Marrocos");
+        String texto = builder.toString();
+        System.out.println("Classe StringBuilder: " + texto);
+
     }
 }
