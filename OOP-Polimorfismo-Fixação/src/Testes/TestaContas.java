@@ -16,5 +16,11 @@ public class TestaContas {
 
         System.out.println("Saldo Conta Corrente: " + cc.getSaldo());
         System.out.println("Saldo Conta Poupança: " + cp.getSaldo());
+
+        Object cc1 = new ContaCorrente(22, 33);
+        Object cp1 = new ContaPoupanca(33, 22);
+
+        System.out.println(cc1);
+        System.out.println(cp1);
     }
 }

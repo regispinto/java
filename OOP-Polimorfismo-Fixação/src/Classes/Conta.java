@@ -76,4 +76,9 @@ public abstract class Conta {
     }
 
     public abstract double getValorImposto();
+
+    @Override
+    public String toString() {
+        return "Numero: " + this.numero + ", Agencia: " + this.agencia;
+    }
 }

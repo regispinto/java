@@ -19,4 +19,9 @@ public class ContaPoupanca extends Conta implements Tributavel {
     public double getValorImposto() {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca, " + super.toString();
+    }
 }
