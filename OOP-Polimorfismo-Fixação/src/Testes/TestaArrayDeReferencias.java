@@ -23,5 +23,20 @@ public class TestaArrayDeReferencias {
 
         // Chamando o getNumero() da classe ContaCorrente através do array contas[]
         System.out.println(contas[1].getNumero());
+
+        // Declaração de arrays de forma Literal, nesse contexto, significa usar valores diretamente,
+        // menos burocrático, mais direito
+        int[] refs = {1,2,3,4,5};
+        System.out.println("refs[0]: " + refs[0]);
+        System.out.println("refs[1]: " + refs[1]);
+        System.out.println("refs[2]: " + refs[2]);
+        System.out.println("refs[3]: " + refs[3]);
+        System.out.println("refs[4]: " + refs[4]);
+
+        for (int x = 0; x < refs.length; x++){
+            System.out.println("refs[" + x + "]: " + refs[x]);
+        }
+
+
     }
 }
