@@ -2,7 +2,6 @@ package Testes;
 
 import Classes.Conta;
 import Classes.ContaCorrente;
-import Classes.GuardadorDeContas;
 import Classes.GuardadorDeReferencias;
 
 public class TestaGuardadorDeReferencias {
