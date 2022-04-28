@@ -8,7 +8,10 @@ import java.util.ArrayList;
 public class TesteArrayList {
     public static void main(String[] args) {
 
-        ArrayList lista = new ArrayList();
+        //Generics
+        ArrayList<Conta> lista = new ArrayList<Conta>();
+
+        ArrayList<String> nomes = new ArrayList<String>();
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
@@ -18,7 +21,7 @@ public class TesteArrayList {
 
         System.out.println("Tamanho: " + lista.size());
 
-        Conta ref = (Conta) lista.get(0);
+        Conta ref = lista.get(0);
         System.out.println(ref.getNumero());
 
         lista.remove(0);
