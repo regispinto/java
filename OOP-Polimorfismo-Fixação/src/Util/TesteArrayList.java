@@ -6,15 +6,16 @@ import Classes.ContaCorrente;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 
 public class TesteArrayList {
     public static void main(String[] args) {
 
-        //Generics
-        //ArrayList<Conta> lista = new ArrayList<Conta>();
-        //LinkedList<Conta> lista = new LinkedList<Conta>();
-        //ArryaList e LinkedList são implementações da inteface List
-        List<Conta> lista = new LinkedList<Conta>();
+        //ArrayList<Conta> lista = new ArrayList<Conta>();              //Usa array por baixo
+        //LinkedList<Conta> lista = new LinkedList<Conta>();            //Lista linkada
+        //List<Conta> lista = new LinkedList<Conta>();                  //Interface de ArryList e LinkedLis
+
+        List<Conta> lista = new Vector<Conta>();                        //Usa array por baixo, mas tbm é threadsafe
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
