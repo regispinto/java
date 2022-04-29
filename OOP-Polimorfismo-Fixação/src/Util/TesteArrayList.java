@@ -4,14 +4,17 @@ import Classes.Conta;
 import Classes.ContaCorrente;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class TesteArrayList {
     public static void main(String[] args) {
 
         //Generics
-        ArrayList<Conta> lista = new ArrayList<Conta>();
-
-        ArrayList<String> nomes = new ArrayList<String>();
+        //ArrayList<Conta> lista = new ArrayList<Conta>();
+        //LinkedList<Conta> lista = new LinkedList<Conta>();
+        //ArryaList e LinkedList são implementações da inteface List
+        List<Conta> lista = new LinkedList<Conta>();
 
         Conta cc = new ContaCorrente(22, 11);
         lista.add(cc);
