@@ -31,17 +31,14 @@ public class TesteOrdenandoListas {
         lista1.add(cc4);
 
         System.out.println("-- [LISTA PELO NÚMERO DA CONTA] ---------------------------------");
-        for (Conta conta: lista1) {
-            System.out.println(conta);
-        }
-        OrdenaPeloNumeroDaConta comparator = new OrdenaPeloNumeroDaConta();
-        lista1.sort(comparator);
+        lista1.forEach(conta -> System.out.println(conta));
+
+        // Utilizando Lâmbidas
+        lista1.sort((c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
         System.out.println("-- Lista Ordenada pelo número da conta ---------------------------");
 
-        for (Conta conta: lista1) {
-            System.out.println(conta);
-        }
+        lista1.forEach(conta -> System.out.println(conta));
         //
         System.out.println("-- [LISTA PELO TITULAR DA CONTA] ---------------------------------");
         Conta cc5 = new ContaCorrente(22, 33);
@@ -74,38 +71,20 @@ public class TesteOrdenandoListas {
         lista2.add(cc7);
         lista2.add(cc8);
         //
-        for (Conta conta: lista2) {
-            System.out.println(conta);
-        }
-        OrdenaPeloNomeDoTitular nomeComparator = new OrdenaPeloNomeDoTitular();
-        lista2.sort(nomeComparator);
+        lista2.forEach(conta -> System.out.println(conta));
+
+        // Utilizando Lâmbidas
+        lista2.sort((c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
+
+        Comparator<Conta> comp = (Conta c1, Conta c2) -> {
+                String nomeC1 = c1.getTitular().getNome();
+                String nomeC2 = c2.getTitular().getNome();
+                return nomeC1.compareTo(nomeC2);
+        };
+
+        lista2.sort(comp);
 
         System.out.println("-- Lista Ordenada pelo Nome do Titular ---------------------------");
-
-        for (Conta conta: lista2) {
-            System.out.println(conta + ", " + conta.getTitular().getNome());
-        }
-    }
-}
-
-class OrdenaPeloNumeroDaConta implements Comparator<Conta> {
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        if(c1.getNumero() < c2.getNumero()) {
-            return -1;
-        }
-        if(c1.getNumero() > c2.getNumero()) {
-            return 1;
-        }
-        return 0;
-    }
-}
-
-class OrdenaPeloNomeDoTitular implements Comparator<Conta> {
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        String nomeC1 = c1.getTitular().getNome();
-        String nomeC2 = c2.getTitular().getNome();
-        return nomeC1.compareTo(nomeC2);
+        lista2.forEach(conta -> System.out.println(conta + ", " + conta.getTitular().getNome()));
     }
 }
