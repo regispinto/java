@@ -34,8 +34,15 @@ public class TesteOrdenandoListas {
         for (Conta conta: lista1) {
             System.out.println(conta);
         }
-        OrdenaPeloNumeroDaConta comparator = new OrdenaPeloNumeroDaConta();
-        lista1.sort(comparator);
+
+        // Classes anônimas
+        lista1.sort(new Comparator<Conta>() {
+                        @Override
+                        public int compare(Conta c1, Conta c2) {
+                            return Integer.compare(c1.getNumero(), c2.getNumero());
+                        }
+                    }
+        );
 
         System.out.println("-- Lista Ordenada pelo número da conta ---------------------------");
 
@@ -77,35 +84,22 @@ public class TesteOrdenandoListas {
         for (Conta conta: lista2) {
             System.out.println(conta);
         }
-        OrdenaPeloNomeDoTitular nomeComparator = new OrdenaPeloNomeDoTitular();
-        lista2.sort(nomeComparator);
+
+        // Classes anônimas
+        lista2.sort(new Comparator<Conta>() {
+                        @Override
+                        public int compare(Conta c1, Conta c2) {
+                            String nomeC1 = c1.getTitular().getNome();
+                            String nomeC2 = c2.getTitular().getNome();
+                            return nomeC1.compareTo(nomeC2);
+                        }
+                    }
+        );
 
         System.out.println("-- Lista Ordenada pelo Nome do Titular ---------------------------");
 
         for (Conta conta: lista2) {
             System.out.println(conta + ", " + conta.getTitular().getNome());
         }
-    }
-}
-
-class OrdenaPeloNumeroDaConta implements Comparator<Conta> {
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        if(c1.getNumero() < c2.getNumero()) {
-            return -1;
-        }
-        if(c1.getNumero() > c2.getNumero()) {
-            return 1;
-        }
-        return 0;
-    }
-}
-
-class OrdenaPeloNomeDoTitular implements Comparator<Conta> {
-    @Override
-    public int compare(Conta c1, Conta c2) {
-        String nomeC1 = c1.getTitular().getNome();
-        String nomeC2 = c2.getTitular().getNome();
-        return nomeC1.compareTo(nomeC2);
     }
 }
