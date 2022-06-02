@@ -1,6 +1,5 @@
 package br.com.alura.cursos;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
 public class TestaCurso {
@@ -17,6 +16,5 @@ public class TestaCurso {
 
         System.out.println(javaColecoes.getAulas());
         System.out.println(aulas);
-
     }
 }
