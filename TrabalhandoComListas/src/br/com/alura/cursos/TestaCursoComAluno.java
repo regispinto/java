@@ -21,6 +21,9 @@ public class TestaCursoComAluno {
         javaColecoes.getAlunos().forEach(a -> System.out.println(a));
 
         System.out.println("O aluno " + a1 + " está matriculado? " + javaColecoes.estaMatriculao(a1));
-      }
 
+        Aluno turini = new Aluno("Rodrigo Turini", 34672);
+        System.out.println("E esse Turini, está matriculado? " + javaColecoes.estaMatriculao(turini));
+        System.out.println("O a1 é equals ao Turini? " + a1.equals(turini));
+      }
 }
