@@ -5,7 +5,6 @@ import java.io.*;
 public class TesteLeitura {
     public static void main(String[] args) throws IOException {
         LeArquivoTexto();
-        // Teste
     }
 
     public static void LeArquivoTexto() throws IOException {
