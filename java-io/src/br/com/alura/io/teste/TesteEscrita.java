@@ -15,8 +15,7 @@ public class TesteEscrita {
         for (int i=1; i<=20; i++ ) {
             bw.write("Sequência de i = " + i);
             bw.newLine();
-       }
+        }
         bw.close();
     }
-
 }
