@@ -1,7 +1,6 @@
 package br.com.alura.io.teste;
 
 import java.io.*;
-import java.sql.SQLOutput;
 
 public class TesteSerializacao {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
